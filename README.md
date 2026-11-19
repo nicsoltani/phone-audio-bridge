@@ -81,6 +81,12 @@ Settings and the log are kept in `%APPDATA%\PhoneAudioBridge`.
 
 ## Troubleshooting
 
+**Having trouble? Read the [setup and troubleshooting guide](docs/troubleshooting.md)** - it walks through the
+correct Windows sound settings and every problem reported so far. The most common mistake: setting the Windows
+*output* to a CABLE device. Your output must be your real speakers, and your input must be *CABLE Output*.
+
+Quick reference:
+
 | Status / symptom | What to do |
 |---|---|
 | `adb.exe not found` | Put `platform-tools` next to the exe, or tray menu > *Choose adb.exe...* |
@@ -93,8 +99,9 @@ Settings and the log are kept in `%APPDATA%\PhoneAudioBridge`.
 | Occasional tiny click | The phone and PC clocks drift; the app drops a few milliseconds to keep delay low |
 | Sound is delayed | Expected delay is roughly a tenth to a fifth of a second each way; fine for calls, noticeable for gaming |
 | Samsung phone not seen by adb | Install the Samsung USB driver, then re-plug |
-| No microphone sound | Windows output must be your real speakers, **not** any CABLE device (*CABLE Input* or *CABLE In 16ch*); Windows input must be *CABLE Output*. On the phone, check the *Microphone access* quick-settings tile and the app's microphone permission |
-| Calls play on the PC, not the phone | Set your real speakers as the Windows *Default Communication Device* too (Sound control panel > Playback) |
+| No microphone sound | Windows output must be your real speakers, **not** any CABLE device (*CABLE Input* or *CABLE In 16ch*); Windows input must be *CABLE Output*. On the phone, check the *Microphone access* quick-settings tile and the app's microphone permission. [Full checklist](docs/troubleshooting.md#problem-no-microphone-sound) |
+| Sound plays on both PC and phone | Expected - mute or lower the PC speakers. [Details](docs/troubleshooting.md#problem-sound-plays-on-both-the-pc-and-the-phone) |
+| Calls play on the PC, not the phone | Set your real speakers as the Windows *Default Communication Device* too (Sound control panel > Playback). [Details](docs/troubleshooting.md#problem-call-audio-plays-on-the-pc-or-monitor-not-the-phone) |
 
 ## Building from source
 
